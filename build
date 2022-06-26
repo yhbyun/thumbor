@@ -27,7 +27,7 @@ echo "--> TAGGING minimalcompact/thumbor:latest-simd-avx2"
 docker tag minimalcompact/thumbor-simd-avx2 minimalcompact/thumbor:latest-simd-avx2
 
 echo "--> BUILDING minimalcompact/thumbor-nginx-proxy-cache"
-docker build --pull -f nginx-proxy-cache/Dockerfile -t minimalcompact/thumbor-nginx-proxy-cache nginx-proxy-cache/
+docker build -f nginx-proxy-cache/Dockerfile -t minimalcompact/thumbor-nginx-proxy-cache nginx-proxy-cache/
 echo "--> TAGGING minimalcompact/thumbor-nginx-proxy-cache:$THUMBOR_VERSION"
 docker tag minimalcompact/thumbor-nginx-proxy-cache minimalcompact/thumbor-nginx-proxy-cache:$THUMBOR_VERSION
 echo "--> TAGGING minimalcompact/thumbor-nginx-proxy-cache:latest"
